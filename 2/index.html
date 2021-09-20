@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página 1</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- BOOTSTRAP
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    -->
+
+    <!-- Script para suvizar desplazamiento en la página -->
+    <script type="text/javascript">
+    $(document).ready(function() {
+    $('a[href^="#"]').click(function() {
+    var destino = $(this.hash);
+    if (destino.length == 0) {
+      destino = $('a[name="' + this.hash.substr(1) + '"]');
+    }
+    if (destino.length == 0) {
+      destino = $('html');
+    }
+    $('html, body').animate({ scrollTop: destino.offset().top }, 1000);
+    return false;
+    });
+    });
+    </script>
+
+    <!-- Script efecto cargando -->
+    <script>
+    var Loading=(loadingDelayHidden=0)=>{let loading=null;const myLoadingDelayHidden=loadingDelayHidden;let imgs=[];let lenImgs=0;let counterImgsLoading=0;function incrementCounterImgs(){counterImgsLoading+=1;if(counterImgsLoading===lenImgs){hideLoading()}}function hideLoading(){if(loading!==null){loading.classList.remove('show');setTimeout(function(){loading.remove()},myLoadingDelayHidden)}}function init(){document.addEventListener('DOMContentLoaded',function(){loading=document.querySelector('.loading');imgs=Array.from(document.images);lenImgs=imgs.length;if(imgs.length===0){hideLoading()}else{imgs.forEach(function(img){img.addEventListener('load',incrementCounterImgs,false)})}})}return{'init':init}}
+
+    /* tiempo en milisegundos */
+    Loading(3000).init();
+    </script>
+
+</head>
+<body>
+
+<div class="loading show">
+<div class="spin"></div>
+</div>
+
+<header>
+
+    <a href="./" class="logo"><span>Logo o </span> Tíutlo </a>
+
+    <input type="checkbox" id="menu-bar">
+    <label for="menu-bar" class="fas fa-bars"></label>
+
+    <nav class="navbar">
+        <a href="#inicio">Inicio</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#comentarios">Comentarios</a>
+        <a href="#precios">Precios</a>
+        <a href="#contactanos">Contactanos</a>
+    </nav>
+
+</header>
+
+
+
+<div class="slider">
+<ul>
+   <li>
+   <img src="https://i.imgur.com/29qfs3X.jpg" alt="">
+   </li>
+   <li>
+   <img src="https://i.imgur.com/29qfs3X.jpg" alt="">
+   </li>
+   <li>
+   <img src="https://i.imgur.com/29qfs3X.jpg" alt="">
+   </li>
+   <li>
+   <img src="https://i.imgur.com/29qfs3X.jpg" alt="">
+   </li>
+</ul>
+</div>
+
+<section class="home" id="inicio">
+
+    <div class="content">
+        <h3>Titulo titulo <span> titulo </span></h3>
+        <p>Descripcion descripcion descripcion descripcion descripcion descripcion</p>
+        <a href="#" class="btn">Contactanos</a>
+    </div>
+
+    <div class="image">
+        <img src="img/1.png" alt="">
+    </div>
+
+</section>
+
+<section class="features" id="servicios">
+
+    <h1 class="heading"> Servicios </h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <img src="images/f-icon1.png" alt="">
+            <h3>Servicio 1</h3>
+            <p>Descripcion descripcion descripcion descripcion descripcion descripcion.</p>
+            <a href="#" class="btn">Solicitar</a>
+        </div>
+
+        <div class="box">
+            <img src="images/f-icon2.png" alt="">
+            <h3>Servicio 2</h3>
+            <p>Descripcion descripcion descripcion descripcion descripcion descripcion.</p>
+            <a href="#" class="btn">Solicitar</a>
+        </div>
+
+        <div class="box">
+            <img src="images/f-icon3.png" alt="">
+            <h3>Servicio 3</h3>
+            <p>Descripcion descripcion descripcion descripcion descripcion descripcion.</p>
+            <a href="#" class="btn">Solicitar</a>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="home" id="nosotros">
+
+    <div class="image">
+            <img src="img/3.png" alt="">
+    </div>
+    <div class="content">
+            <h3>Empresa</h3>
+            <p>
+            Descripción descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion.
+            </p>
+            <p>
+            Descripción descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion.
+            </p>
+            <p>
+            Ofrecemos: <br>
+            - Servicio 1 <br>
+            - Servicio 2 <br>
+            - Servicio 3 <br>
+            - Servicio 4 <br>
+            - Servicio 5 <br>
+            - Servicio 6
+            </p>
+            <p>
+            Garantizamos:  <br>
+            - Calidad  <br>
+            - Calidad  <br>
+            - Calidad  <br>
+            - Calidad
+            </p>
+            <div class="buttons">
+                <a href="#" class="btn"> <i class="fab fa-google"></i> Contáctanos </a>
+                <a href="#" class="btn"> <i class="fab fa-whatsapp"></i> Solicitar Información </a>
+            </div>
+        </div>
+
+</section>
+
+<section class="about" id="nosotros">
+
+    <h1 class="heading"> Sobre Nosotros </h1>
+
+    <div class="column">
+
+        <div class="image">
+            <img src="img/3.png" alt="">
+        </div>
+
+        <div class="content">
+            <h3>Empresa</h3>
+            <p>
+            Descripción descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion.
+            </p>
+            <p>
+            Descripción descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion.
+            </p>
+            <p>
+            Ofrecemos: <br>
+            - Servicio 1 <br>
+            - Servicio 2 <br>
+            - Servicio 3 <br>
+            - Servicio 4 <br>
+            - Servicio 5 <br>
+            - Servicio 6
+            </p>
+            <p>
+            Garantizamos:  <br>
+            - Calidad  <br>
+            - Calidad  <br>
+            - Calidad  <br>
+            - Calidad
+            </p>
+            <div class="buttons">
+                <a href="#" class="btn"> <i class="fab fa-google"></i> Contáctanos </a>
+                <a href="#" class="btn"> <i class="fab fa-whatsapp"></i> Solicitar Información </a>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<div class="newsletter">
+
+    <h3>Para más ofertas escríbenos</h3>
+    <p>Tu correo electrónico será privado para ######</p>
+    <form action="">
+        <input type="email" placeholder="Correo Electrónico">
+        <input type="submit" value="Enviar">
+    </form>
+
+</div>
+
+<section class="review" id="comentarios">
+    <h1 class="heading"> Comentarios de Peronas </h1>
+    <div class="box-container">
+
+        <div class="box">
+            <i class="fas fa-quote-right"></i>
+            <div class="user">
+                <img src="images/pic1.png" alt="">
+                <h3>Persona 1</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <div class="comment">
+                    Descripción descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion.
+                </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <i class="fas fa-quote-right"></i>
+            <div class="user">
+                <img src="images/pic1.png" alt="">
+                <h3>Persona 2</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <div class="comment">
+                    Descripción descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion.
+                </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <i class="fas fa-quote-right"></i>
+            <div class="user">
+                <img src="images/pic1.png" alt="">
+                <h3>Persona 3</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <div class="comment">
+                    Descripción descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion.
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="pricing" id="precios">
+
+    <h1 class="heading"> Precios </h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <h3 class="title">Limpieza Básica</h3>
+            <div class="price">S/ 000.00<span>/mes-año-instante</span></div>
+            <ul>
+                <li> <i class="fas fa-check"></i> Piso </li>
+                <li> <i class="fas fa-check"></i> Baño </li>
+                <li> <i class="fas fa-check"></i> Habitaciones </li>
+                <li> <i class="fas fa-times"></i> Techo </li>
+                <li> <i class="fas fa-times"></i> Sotano </li>
+            </ul>
+            <a href="#" class="btn">Solicitar</a>
+        </div>
+
+        <div class="box">
+            <h3 class="title">Limpieza Avanzada</h3>
+            <div class="price">S/ 000.00<span>/mes-año-instante</span></div>
+            <ul>
+                <li> <i class="fas fa-check"></i> Piso </li>
+                <li> <i class="fas fa-check"></i> Baño </li>
+                <li> <i class="fas fa-check"></i> Habitaciones </li>
+                <li> <i class="fas fa-check"></i> Techo </li>
+                <li> <i class="fas fa-times"></i> Sotano </li>
+            </ul>
+            <a href="#" class="btn">Solicitar</a>
+        </div>
+
+        <div class="box">
+            <h3 class="title">Limpieza Total</h3>
+            <div class="price">S/ 000.00<span>/mes-año-instante</span></div>
+            <ul>
+                <li> <i class="fas fa-check"></i> Piso </li>
+                <li> <i class="fas fa-check"></i> Baño </li>
+                <li> <i class="fas fa-check"></i> Habitaciones </li>
+                <li> <i class="fas fa-check"></i> Techo </li>
+                <li> <i class="fas fa-check"></i> Sotano </li>
+            </ul>
+            <a href="#" class="btn">Solicitar</a>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="contact" id="contactanos">
+
+    <div class="image">
+        <img src="img/4.png" alt="">
+    </div>
+
+    <form action="">
+
+        <h1 class="heading">Contáctanos</h1>
+
+        <div class="inputBox">
+            <input type="text" required>
+            <label>Nombres y Apellidos</label>
+        </div>
+
+        <div class="inputBox">
+            <input type="email" required>
+            <label>Correo Electrónico</label>
+        </div>
+
+        <div class="inputBox">
+            <input type="number" required>
+            <label>Celular</label>
+        </div>
+
+        <div class="inputBox">
+            <textarea required name="" id="" cols="30" rows="10"></textarea>
+            <label>Mensaje</label>
+        </div>
+
+        <input type="submit" class="btn" value="Enviar mensaje">
+
+    </form>
+
+</section>
+
+<div class="footer">
+
+    <div class="box-container">
+
+        <div class="box">
+            <h3>Empresa</h3>
+            <p>Descripción descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion.</p>
+        </div>
+
+        <div class="box">
+            <h3>Menú</h3>
+            <a href="#">Inicio</a>
+            <a href="#">Servicios</a>
+            <a href="#">Nosotros</a>
+            <a href="#">Comentarios</a>
+            <a href="#">Precios</a>
+            <a href="#">Contáctanos</a>
+        </div>
+
+        <div class="box">
+            <h3>Siguenos en</h3>
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+            <a href="#">Pinterest</a>
+            <a href="#">Twitter</a>
+        </div>
+
+        <div class="box">
+            <h3>Más contanos</h3>
+            <div class="info">
+                <i class="fas fa-phone"></i>
+                <p> 999 999 999 <br> 1234567 </p>
+            </div>
+            <div class="info">
+                <i class="fas fa-envelope"></i>
+                <p> correo@gmail.com <br> correo@gmail.com </p>
+            </div>
+            <div class="info">
+                <i class="fas fa-map-marker-alt"></i>
+                <p> Lima, Perú </p>
+            </div>
+        </div>
+
+    </div>
+
+    <h1 class="credit"> &copy; copyright @ 2021 - Creado por: Eddy Monje </h1>
+
+</div>
+
+</body>
+</html>
